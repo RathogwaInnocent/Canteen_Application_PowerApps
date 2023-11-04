@@ -1,0 +1,42 @@
+Home As screen:
+    BackgroundImage: =Screenshot_0
+    ImagePosition: =ImagePosition.Fill
+
+    Rectangle1 As rectangle:
+        BorderColor: =RGBA(0, 1, 0, 0.5)
+        BorderStyle: =BorderStyle.None
+        Fill: =RGBA(0, 0, 0, 0.36)
+        Height: =1136
+        Width: =640
+        ZIndex: =1
+
+    Button1 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(255, 191, 0, 0.81)
+        Height: =80
+        HoverFill: =RGBA(141, 198, 63, 1)
+        OnSelect: =Navigate(Menu,ScreenTransition.Fade)
+        RadiusBottomLeft: =40
+        RadiusBottomRight: =40
+        RadiusTopLeft: =40
+        RadiusTopRight: =40
+        Size: =24
+        Text: ="Place Order"
+        Width: =451
+        X: =94
+        Y: =990
+        ZIndex: =4
+
+    Label3_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.Georgia
+        Height: =70
+        Italic: =true
+        Size: =30
+        Text: ="Food Ordering App"
+        Width: =451
+        X: =94
+        Y: =640
+        ZIndex: =5
+

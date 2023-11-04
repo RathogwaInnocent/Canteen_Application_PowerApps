@@ -1,0 +1,108 @@
+"Confirmation As screen.'phoneLayout_Success_ver3.0'":
+    Fill: =RGBA(237, 237, 237, 1)
+
+    LblSuccessMsg1 As label:
+        Align: =Align.Center
+        Height: =41
+        Size: =21
+        Text: ="Your order has been placed"
+        Width: =637
+        X: =1
+        Y: =155
+        ZIndex: =3
+
+    Label4 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        Size: =21
+        Text: ="Order Summary"
+        Width: =637
+        Y: =216
+        ZIndex: =4
+
+    IcnComplete As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =4
+
+        iconCircle1 As circle.Circle:
+            Fill: =RGBA(54, 176, 75, 1)
+            X: =270
+            Y: =36
+            ZIndex: =1
+
+        iconCheck1 As icon.Check:
+            BorderColor: =RGBA(54, 176, 75, 1)
+            Height: =iconCircle1.Height
+            Icon: =Icon.Check
+            PaddingBottom: =Self.PaddingTop
+            PaddingLeft: =Self.PaddingTop
+            PaddingRight: =Self.PaddingTop
+            PaddingTop: =18
+            Width: =iconCircle1.Width
+            X: =271
+            Y: =36
+            ZIndex: =2
+
+    Image3 As image:
+        Height: =320
+        Image: =MenuItems.Selected.Image
+        Width: =320
+        X: =161
+        Y: =286
+        ZIndex: =5
+
+    Label5 As label:
+        Align: =Align.Center
+        Height: =70
+        Size: =27
+        Text: =MenuItems.Selected.Name
+        Width: =637
+        Y: =619
+        ZIndex: =6
+
+    Label6 As label:
+        Align: =Align.Center
+        Height: =155
+        Size: =18
+        Text: =MenuItems.Selected.About
+        Width: =637
+        X: =3
+        Y: =689
+        ZIndex: =7
+
+    Label7 As label:
+        Align: =Align.Center
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =16
+        Text: |-
+            ="Your ordered " & Form1.LastSubmit.Quantity & " meal(s), your total bill is " & Text(Form1.LastSubmit.Amount, "[$-en-US]R##,###.00")
+        Width: =634
+        X: =3
+        Y: =844
+        ZIndex: =8
+
+    Label8 As label:
+        Align: =Align.Center
+        Height: =70
+        Italic: =true
+        Size: =21
+        Text: ="Your order is on the way!"
+        Underline: =true
+        Width: =560
+        X: =38
+        Y: =914
+        ZIndex: =9
+
+    Icon1 As icon.Home:
+        Color: =RGBA(0, 0, 0, 1)
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Home,ScreenTransition.Fade)
+        X: =289
+        Y: =1051
+        ZIndex: =10
+

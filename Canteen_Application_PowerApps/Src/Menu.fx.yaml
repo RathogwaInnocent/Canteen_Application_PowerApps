@@ -1,0 +1,210 @@
+"Menu As screen.'phoneLayout_HeaderAndGallery_ver3.0'":
+
+    RectQuickActionBar1 As rectangle:
+        Fill: =RGBA(54, 176, 75, 1)
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName1 As label:
+        Height: =88
+        Size: =27
+        Text: ="[Title]"
+        Width: =
+        Wrap: =false
+        X: =20
+        ZIndex: =2
+
+    IconRefresh1 As icon.Reload:
+        AccessibleLabel: =Self.Tooltip
+        Height: =88
+        Icon: =Icon.Reload
+        OnSelect: =Refresh(Menus)
+        PaddingBottom: =22
+        PaddingLeft: =22
+        PaddingRight: =22
+        PaddingTop: =22
+        TabIndex: =0
+        Tooltip: ="Refresh list"
+        Width: =88
+        X: =552
+        ZIndex: =3
+
+    TextSearchBox1 As text:
+        Default: =""
+        Height: =68
+        HintText: ="Search items"
+        HoverBorderColor: =RGBA(232, 244, 217, 1)
+        HoverFill: =RGBA(219, 219, 219, 1)
+        OnSelect: =Search(Menus,TextSearchBox1.Text,"tb_name")
+        PaddingLeft: =70
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =7
+        RadiusTopLeft: =0
+        RadiusTopRight: =7
+        Size: =21
+        Width: =Parent.Width
+        Y: =RectQuickActionBar1.Height
+        ZIndex: =6
+
+    SearchIcon1 As icon.Search:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =Self.Width
+        Icon: =Icon.Search
+        PaddingBottom: =14
+        PaddingLeft: =14
+        PaddingRight: =14
+        PaddingTop: =14
+        Tooltip: ="Search"
+        Width: =TextSearchBox1.Height
+        X: =TextSearchBox1.X
+        Y: =TextSearchBox1.Y
+        ZIndex: =7
+
+    Rectangle11 As rectangle:
+        Height: =2
+        Width: =Parent.Width
+        Y: =TextSearchBox1.Y + TextSearchBox1.Height
+        ZIndex: =8
+
+    "MenuItems As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =RGBA(219, 219, 219, 1)
+        BorderThickness: =4
+        DelayItemLoading: =true
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =Parent.Height - Self.Y
+        Items: =Search(Menus,TextSearchBox1.Text,"tb_name")
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =181
+        Y: =TextSearchBox1.Y + TextSearchBox1.Height
+        ZIndex: =9
+
+        Image1 As image:
+            Height: =145
+            Image: =ThisItem.Image
+            OnSelect: =Select(Parent)
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =106
+            X: =16
+            Y: =16
+            ZIndex: =1
+
+        Title1 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =25
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Name
+            VerticalAlign: =VerticalAlign.Top
+            Width: =440
+            X: =138
+            Y: =40
+            ZIndex: =2
+
+        Subtitle1 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =49
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.About
+            VerticalAlign: =VerticalAlign.Top
+            Width: =392
+            X: =Title1.X
+            Y: =65
+            ZIndex: =3
+
+        NextArrow1 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent);Navigate(Order,ScreenTransition.Fade)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="View item details"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator1 As rectangle:
+            BorderColor: =RGBA(202, 202, 202, 1)
+            BorderThickness: =5
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle2 As rectangle:
+            Height: =Parent.TemplateHeight - Separator1.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
+
+        Title1_1 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Bold, FontWeight.Normal)
+            Height: =18
+            Italic: =true
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |
+                =Text(ThisItem.Price, "[$-en-US]R ##,###.00")
+            VerticalAlign: =VerticalAlign.Top
+            Width: =439
+            X: =138
+            Y: =114
+            ZIndex: =7
+
+    Icon3 As icon.BackArrow:
+        Color: =RGBA(255, 255, 255, 1)
+        FocusedBorderThickness: =5
+        Height: =88
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Navigate(Home,ScreenTransition.Fade)
+        PaddingBottom: =22
+        PaddingLeft: =22
+        PaddingRight: =22
+        PaddingTop: =22
+        Width: =88
+        ZIndex: =10
+
+    Label3 As label:
+        Align: =Align.Center
+        Height: =41
+        Italic: =true
+        Size: =18
+        Text: |-
+            ="User: " & User().FullName
+        Width: =291
+        Y: =1095
+        ZIndex: =11
+
+    Label2 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =68
+        Size: =21
+        Text: ="Choose a delicious meal"
+        Width: =417
+        X: =101
+        Y: =10
+        ZIndex: =12
+

@@ -1,0 +1,18 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_tb_menu_forms",
+      "Namespace": "Menus (Forms)",
+      "Values": {
+        "Information": "e7bce05c-ce11-4690-9d08-77894d4e5bbf"
+      }
+    },
+    {
+      "Kind": "default.cds_tb_order_forms",
+      "Namespace": "Orders (Forms)",
+      "Values": {
+        "Information": "17c349f4-322d-46b0-8538-e24c40d3f4f5"
+      }
+    }
+  ]
+}

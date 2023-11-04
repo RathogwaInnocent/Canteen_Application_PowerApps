@@ -1,0 +1,105 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "tb_menus",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "tb_menu",
+    "Name": "Menus",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "exchangerate": "Exchange Rate",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "tb_about": "About",
+      "tb_image": "Image",
+      "tb_imageid": "tb_ImageId",
+      "tb_menu_AsyncOperations": "System Jobs",
+      "tb_menu_BulkDeleteFailures": "Bulk Delete Failures",
+      "tb_menu_DuplicateBaseRecord": "Duplicate Records (tb_menu_DuplicateBaseRecord)",
+      "tb_menu_DuplicateMatchingRecord": "Duplicate Records (tb_menu_DuplicateMatchingRecord)",
+      "tb_menu_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "tb_menu_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "tb_menu_ProcessSession": "Process Sessions",
+      "tb_menu_SyncErrors": "Sync Errors",
+      "tb_menuid": "Menu",
+      "tb_name": "Name",
+      "tb_price": "Price",
+      "tb_price_base": "Price (Base)",
+      "tb_tb_order_MenuItem_tb_menu": "Orders",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Menus",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Menus (Views)",
+    "Name": "_tb_menu_views",
+    "RelatedEntityName": "Menus",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0c6826f6-05c2-458a-8f00-bafbba3803eb": "Active Menus (0c6826f6-05c2-458a-8f00-bafbba3803eb)",
+      "2b878e08-8abe-44b8-bd63-65e0ead9558c": "Inactive Menus",
+      "515038a5-f568-ee11-8def-6045bdd2c482": "Active Menus (515038a5-f568-ee11-8def-6045bdd2c482)",
+      "54f28c34-7bbe-4f44-97c6-4dc87496c0fa": "Menu Associated View",
+      "a71357dc-932f-4602-85ad-28949e29c8ba": "Menu Lookup View",
+      "da261d6b-c744-4286-9e77-5eba5936754b": "Menu Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (Menus)",
+    "Name": "tb_menu_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Menus"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Menus",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Menus)",
+    "Name": "tb_menu_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Menus"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Menus",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -1,0 +1,161 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "tb_orders",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "tb_order",
+    "MaxGetRowsCount": 500,
+    "Name": "Orders",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "exchangerate": "Exchange Rate",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "tb_amount": "Amount",
+      "tb_amount_base": "Amount (Base)",
+      "tb_desknumber": "Desk Number",
+      "tb_emailaddress": "Email Address",
+      "tb_floor": "Floor",
+      "tb_fullname": "Full Name",
+      "tb_MenuItem": "Menu Item",
+      "tb_menuitemid": "Menu Item ID",
+      "tb_name": "Name",
+      "tb_order_AsyncOperations": "System Jobs",
+      "tb_order_BulkDeleteFailures": "Bulk Delete Failures",
+      "tb_order_DuplicateBaseRecord": "Duplicate Records (tb_order_DuplicateBaseRecord)",
+      "tb_order_DuplicateMatchingRecord": "Duplicate Records (tb_order_DuplicateMatchingRecord)",
+      "tb_order_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "tb_order_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "tb_order_ProcessSession": "Process Sessions",
+      "tb_order_SyncErrors": "Sync Errors",
+      "tb_orderid": "Order",
+      "tb_orderstatus": "Order Status",
+      "tb_paymentmethod": "Payment Method",
+      "tb_price": "Price",
+      "tb_price_base": "Price (Base)",
+      "tb_quantity": "Quantity",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "transactioncurrencyid": "Currency",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Orders",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Orders (Views)",
+    "Name": "_tb_order_views",
+    "RelatedEntityName": "Orders",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "35c1f492-f04e-47c6-a9c0-b18acc328a8a": "Order Lookup View",
+      "5848e12d-e66d-ee11-9ae7-6045bdd2c482": "5 - Delivered",
+      "6e3fbc0b-e66d-ee11-9ae7-6045bdd2c482": "4 - On the way",
+      "78a3314f-2858-476f-a3c0-0271251b1a95": "Order Associated View",
+      "7d402792-e56d-ee11-9ae7-6045bdd2c482": "1 - New Orders",
+      "92555cc2-e56d-ee11-9ae7-6045bdd2c482": "2 - Preparing",
+      "b49e4f41-cbe1-49e3-81ab-6c06162390d8": "Active Orders",
+      "c62bd1aa-36d3-4533-9c1e-7cb17ce7bb82": "Order Advanced Find View",
+      "c7b5eead-18ee-4186-b593-dde1f770a5a4": "Inactive Orders",
+      "f853e1e6-e56d-ee11-9ae7-6045bdd2c482": "3 - Ready for Collection"
+    }
+  },
+  {
+    "DisplayName": "Status (Orders)",
+    "Name": "tb_order_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Orders"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Orders",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Orders)",
+    "Name": "tb_order_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Orders"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Orders",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Order Status",
+    "Name": "tb_orderstatus",
+    "OptionSetInfoNameMapping": {
+      "100000000": "Order Placed",
+      "100000001": "Preparing",
+      "100000002": "Ready for collection",
+      "100000003": "On the way",
+      "100000004": "Delivered"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "tb_orderstatus",
+        "OptionSetReferenceEntityName": "Orders"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "tb_orderstatus",
+    "RelatedEntityName": "Orders",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Payment Method",
+    "Name": "tb_paymentmethod",
+    "OptionSetInfoNameMapping": {
+      "1": "Blank",
+      "2": "Cash",
+      "3": "Account"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "tb_paymentmethod",
+        "OptionSetReferenceEntityName": "Orders"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "tb_paymentmethod",
+    "RelatedEntityName": "Orders",
+    "Type": "OptionSetInfo"
+  }
+]
