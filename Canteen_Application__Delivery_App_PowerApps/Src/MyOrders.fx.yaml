@@ -1,0 +1,45 @@
+MyOrders As screen:
+    BackgroundImage: ='8268822_3859370'
+    ImagePosition: =ImagePosition.Fill
+
+    Icon1 As icon.Reload:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.Reload
+        X: =570
+        Y: =6
+        ZIndex: =1
+
+    Button1 As button:
+        Color: =RGBA(0, 41, 63, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =90
+        HoverFill: =ColorFade(Self.Fill, -20%)
+        OnSelect: =Navigate(ReadyForCollection,ScreenTransition.CoverRight)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =24
+        Text: ="Collection"
+        Width: =300
+        X: =176
+        Y: =852
+        ZIndex: =2
+
+    Button1_1 As button:
+        Color: =RGBA(0, 41, 63, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =90
+        HoverFill: =ColorFade(Self.Fill, -20%)
+        OnSelect: =Navigate(MyDeliveries,ScreenTransition.CoverRight)
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Size: =24
+        Text: ="Deliveries"
+        Width: =300
+        X: =176
+        Y: =981
+        ZIndex: =3
+

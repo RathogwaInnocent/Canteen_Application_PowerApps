@@ -1,0 +1,102 @@
+ReadyForCollection As screen:
+    BackgroundImage: =
+
+    Label1 As label:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(255, 192, 25, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =70
+        PaddingLeft: =25
+        Size: =21
+        Text: ="Ready for collection"
+        Width: =639
+        ZIndex: =1
+
+    Icon1_1 As icon.Reload:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.Reload
+        OnSelect: =Refresh(Orders)
+        PaddingBottom: =10
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =10
+        X: =570
+        Y: =6
+        ZIndex: =2
+
+    Icon2 As icon.Home:
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.Home
+        OnSelect: =Navigate(MyOrders,ScreenTransition.Fade)
+        PaddingBottom: =10
+        PaddingLeft: =10
+        PaddingRight: =10
+        PaddingTop: =10
+        X: =489
+        Y: =3
+        ZIndex: =3
+
+    Gallery1 As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Fill: =RGBA(0, 41, 63, 1)
+        Height: =1063
+        Items: =Filter(Orders, 'Orders (Views)'.'3 - Ready for Collection')
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateFill: =If(ThisItem.IsSelected, Color.DarkGray)
+        TemplateSize: =334
+        Y: =70
+        ZIndex: =4
+
+        Label2 As label:
+            FontWeight: =FontWeight.Bold
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =25
+            Text: =ThisItem.Name
+            Width: =560
+            X: =16
+            Y: =26
+            ZIndex: =1
+
+        Label3 As label:
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: |-
+                ="Floor: " & ThisItem.Floor & " - " & "Desk Number: " & ThisItem.'Desk Number'
+            Width: =560
+            X: =16
+            Y: =96
+            ZIndex: =2
+
+        Label4 As label:
+            Height: =70
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: |-
+                ="Customer : " & ThisItem.'Full Name'
+            Width: =560
+            X: =16
+            Y: =166
+            ZIndex: =3
+
+        Label5 As label:
+            Height: =70
+            OnSelect: =Navigate(ConfirmCollection,ScreenTransition.Cover)
+            Size: =21
+            Text: |-
+                ="Amount : " & Text(ThisItem.Amount,"[$-en-US]R##,###.00")
+            Width: =560
+            X: =16
+            Y: =236
+            ZIndex: =4
+
+        Icon3 As icon.CheckBadge:
+            Color: =RGBA(250, 123, 66, 1)
+            Icon: =Icon.CheckBadge
+            OnSelect: =Navigate(ConfirmCollection,ScreenTransition.Cover)
+            X: =546
+            Y: =134
+            ZIndex: =5
+
