@@ -1,5 +1,14 @@
 # Canteen_Application_PowerApps
 
+This is a canteen ordering app to manage orders placed and deliverys. The purpose this solution is that a business may have many people going down to the canteen at the same time, which is causing massive queues and long delays.
+This solution will employees to order from their desks using their mobile phones, the resturant team will cook/prepare your order and then a delivery person will collect the order from the canteen and then go and deliver it to your desk.
+
+The application also manages how employyess will with opens for payment methods. The solution will reduce the traffic at the canteen and find a more efficient way to get food delivered to employees.
+
+The solution has two mobile applications and one model driven application.
+
+The model driven application is essentially a model of an app that is used by the canteen team to receive the orders and create and manage their their actual menu. All three application use the same database.
+
 <img width="199" alt="Screenshot_1" src="https://github.com/RathogwaInnocent/Canteen_Application_PowerApps/assets/17208775/3c073378-6743-4110-999e-a19cc1d4d535">
 
 >>>
